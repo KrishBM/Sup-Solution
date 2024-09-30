@@ -1,0 +1,130 @@
+[
+  {
+    "id": 0,
+    "name": "1sq",
+    "picture": "images/4.jpg",
+    "age": 3,
+    "breed": "cold",
+    "location": "Clayton"
+  },
+  {
+    "id": 1,
+    "name": "2sq",
+    "picture": "images/4.jpg",
+    "age": 3,
+    "breed": "normal",
+    "location": "Clayton"
+  },
+  {
+    "id": 2,
+    "name": "3sq",
+    "picture": "images/2.png",
+    "age": 2,
+    "breed": "cold",
+    "location": "Clayton"
+  },
+  {
+    "id": 3,
+    "name": "4sq",
+    "picture": "images/1.jpg",
+    "age": 2,
+    "breed": "normal",
+    "location": "Clayton"
+  },
+  {
+    "id": 4,
+    "name": "5sq",
+    "picture": "images/2.png",
+    "age": 2,
+    "breed": "cold",
+    "location": "Clayton"
+  },
+  {
+    "id": 5,
+    "name": "6sq",
+    "picture": "images/2.png",
+    "age": 3,
+    "breed": "normal",
+    "location": "Clayton"
+  },
+  {
+    "id": 6,
+    "name": "7sq",
+    "picture": "images/3.jpg",
+    "age": 3,
+    "breed": "cold",
+    "location": "westall"
+  },
+  {
+    "id": 7,
+    "name": "8sq",
+    "picture": "images/3.jpg",
+    "age": 3,
+    "breed": "normal",
+    "location": "westall"
+  },
+  {
+    "id": 8,
+    "name": "9sq",
+    "picture": "images/2.png",
+    "age": 2,
+    "breed": "cold",
+    "location": "westall"
+  },
+  {
+    "id": 9,
+    "name": "10sq",
+    "picture": "images/1.jpg",
+    "age": 3,
+    "breed": "normal",
+    "location": "westall"
+  },
+  {
+    "id": 10,
+    "name": "11sq",
+    "picture": "images/1.jpg",
+    "age": 2,
+    "breed": "cold",
+    "location": "westall"
+  },
+  {
+    "id": 11,
+    "name": "12sq",
+    "picture": "images/4.jpg",
+    "age": 3,
+    "breed": "normal",
+    "location": "oakleigh"
+  },
+  {
+    "id": 12,
+    "name": "13sq",
+    "picture": "images/2.png",
+    "age": 3,
+    "breed": "cold",
+    "location": "oakleigh"
+  },
+  {
+    "id": 13,
+    "name": "14sq",
+    "picture": "images/3.jpg",
+    "age": 4,
+    "breed": "normal",
+    "location": "oakleigh"
+  },
+  {
+    "id": 14,
+    "name": "15sq",
+    "picture": "images/3.jpg",
+    "age": 2,
+    "breed": "cold",
+    "location": "oakleigh"
+  },
+  {
+    "id": 15,
+    "name": "16sq",
+    "picture": "images/3.jpg",
+    "age": 2,
+    "breed": "normal",
+    "location": "oakleigh"
+  }
+]
