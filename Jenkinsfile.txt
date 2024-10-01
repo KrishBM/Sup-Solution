@@ -19,11 +19,11 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Unit Test') {
             steps {
                 script {
-                    // Run tests using Truffle
-                    bat 'node_modules\\.bin\\truffle test'
+                    // Run unit tests for the Node.js application
+                    bat 'npm test'
                 }
             }
         }
