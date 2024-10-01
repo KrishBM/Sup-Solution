@@ -13,8 +13,8 @@ pipeline {
             steps {
                 script {
                     // Install dependencies
-                    sh 'npm install'
-                    sh 'npm install lite-server'
+                    bat 'npm install'
+                    bat 'npm install lite-server'
                 }
             }
         }
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     // Run tests using Truffle
-                    sh './node_modules/.bin/truffle test'
+                    bat 'node_modules\\.bin\\truffle test'
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
                 // Run code quality analysis using SonarQube
                 script {
                     withSonarQubeEnv('SonarQube') {
-                        sh 'sonar-scanner'
+                        bat 'sonar-scanner'
                     }
                 }
             }
@@ -43,7 +43,7 @@ pipeline {
             steps {
                 script {
                     // Deploy the application locally to test
-                    sh 'npm run dev &'
+                    bat 'start npm run dev'
                 }
             }
         }
@@ -53,7 +53,7 @@ pipeline {
                 input message: 'Promote to Production?'
                 script {
                     // Run the application in production mode
-                    sh 'npm run dev &'
+                    bat 'start npm run dev'
                 }
             }
         }
