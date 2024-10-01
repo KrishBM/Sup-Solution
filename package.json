@@ -7,12 +7,19 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "lite-server",
-    "test": "mocha"
+    "test": "npx mocha test/unit-tests/**/*.mjs"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "jsdom": "^25.0.1",
+    "lite-server": "^2.6.1",
+    "mocha": "^10.7.3",
+    "sinon": "^19.0.2"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "jquery": "^3.7.1",
+    "web3": "^4.13.0"
   }
 }
