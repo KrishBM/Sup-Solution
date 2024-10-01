@@ -1,0 +1,79 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the Git repository
+                git branch: 'master', url: 'https://github.com/KrishBM/Sup-Solution.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    // Install dependencies
+                    sh 'npm install'
+                    sh 'npm install lite-server'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                script {
+                    // Run tests using Truffle
+                    sh './node_modules/.bin/truffle test'
+                }
+            }
+        }
+
+        stage('Code Quality Analysis') {
+            steps {
+                // Run code quality analysis using SonarQube
+                script {
+                    withSonarQubeEnv('SonarQube') {
+                        sh 'sonar-scanner'
+                    }
+                }
+            }
+        }
+
+        stage('Deploy to Test Environment') {
+            steps {
+                script {
+                    // Deploy the application locally to test
+                    sh 'npm run dev &'
+                }
+            }
+        }
+
+        stage('Release to Production') {
+            steps {
+                input message: 'Promote to Production?'
+                script {
+                    // Run the application in production mode
+                    sh 'npm run dev &'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+
+        success {
+            echo 'Build was successful.'
+        }
+
+        failure {
+            echo 'Build failed!'
+        }
+
+        unstable {
+            echo 'Build is unstable.'
+        }
+    }
+}
