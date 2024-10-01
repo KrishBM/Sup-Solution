@@ -36,15 +36,15 @@ pipeline {
         stage('Code Quality Analysis') {
             steps {
                 script {
-                    withSonarQubeEnv('SonarQube') {
-                        bat """
-                            sonar-scanner -Dsonar.projectKey=sup-solution \
-                                          -Dsonar.sources=. \
-                                          -Dsonar.host.url=http://localhost:9000 \
-                                          -Dsonar.login=$SONAR_AUTH_TOKEN
-                        """
-                    }
-                }
+            withSonarQubeEnv('SonarQube') {
+                bat """
+                    sonar-scanner -Dsonar.projectKey=sup-solution \
+                                  -Dsonar.sources=. \
+                                  -Dsonar.host.url=http://localhost:9000 \
+                                  -Dsonar.login=$SONAR_AUTH_TOKEN1
+                """
+            }
+        }
             }
         }
 
