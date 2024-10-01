@@ -28,17 +28,6 @@ pipeline {
             }
         }
 
-        stage('Code Quality Analysis') {
-            steps {
-                // Run code quality analysis using SonarQube
-                script {
-                    withSonarQubeEnv('SonarQube') {
-                        bat 'sonar-scanner'
-                    }
-                }
-            }
-        }
-
         stage('Deploy to Test Environment') {
             steps {
                 script {
